@@ -5,7 +5,7 @@ La partie du projet qui concerne ce que j'ai développé pour le bot. C'est donc
 
 ## Le Jeu Pontu (Règles & Plateau)
 
-Le Pontu est un jeu de plateau abstrait d'affrontement opposant deux équipes : Les Rouges (qui commencent) et **Les Bleus**.
+**Le Pontu** est un jeu de plateau abstrait d'affrontement opposant deux équipes : **Les Rouges** (qui commencent) et **Les Bleus**.
 
 ### Composition du plateau
 * **25 îles** disposées en un carré de 5x5, numérotées de `0` à `24` (en partant du coin supérieur gauche, de gauche à droite et de haut en bas).
@@ -15,7 +15,7 @@ Le Pontu est un jeu de plateau abstrait d'affrontement opposant deux équipes : 
 
 ---
 
-### 🎮 Déroulement d'une partie (Variante Royale)
+### Déroulement d'une partie (Variante Royale)
 Chaque joueur possède **2 pions** et **1 Roi** (le Roi apporte une valeur supérieure pour le décompte des points).
 
 1. **Phase de placement (Coups 0 à 5) :** Tour à tour, chaque équipe place ses 3 pièces sur des îles libres (les pions d'abord, le Roi en dernier). Cette phase est cruciale pour contrôler le centre et verrouiller le territoire adverse.
@@ -26,11 +26,11 @@ Chaque joueur possède **2 pions** et **1 Roi** (le Roi apporte une valeur supé
 
 ---
 
-## 🧠 Algorithme & Approche Théorique (`joueurs/parcoeur.c`)
+## Algorithme & Approche Théorique (`joueurs/parcoeur.c`)
 
 Le fichier `parcoeur.c` gère la phase de placement et le premier déplacement/retrait de pont en combinant une base de données d'ouvertures et une réduction géométrique des possibilités.
 
-### ⚙️ Fonctionnement du bot
+### Fonctionnement du bot
 
 | Étape | Action de l'algorithme |
 | :--- | :--- |
@@ -41,7 +41,8 @@ Le fichier `parcoeur.c` gère la phase de placement et le premier déplacement/r
 
 ---
 
-## 🛠️ Structure des Fichiers
+## ![Uploading Capture d’écran du 2026-03-19 09-57-58.png…]()
+Structure des Fichiers
 
 * `joueurs/parcoeur.c` : Moteur de recherche et de réduction par symétrie/rotation.
 * `joueurs/ouvertures.txt` : Base de données contenant les positions théoriques et leurs réponses associées.
