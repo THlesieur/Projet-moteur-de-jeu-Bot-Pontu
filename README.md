@@ -11,7 +11,7 @@ La partie du projet qui concerne ce que j'ai développé pour le bot. C'est donc
 * **25 îles** disposées en un carré de 5x5, numérotées de `0` à `24` (en partant du coin supérieur gauche, de gauche à droite et de haut en bas).
 * **40 ponts** reliant les îles adjacentes, numérotés de `0` à `39`.
 
-![Plateau du jeu Pontu](https://github.com/user-attachments/assets/752aa953-4721-4c06-bdee-de7700e122f0)
+<img width="621" height="609" alt="Capture d’écran du 2026-03-19 09-57-58" src="https://github.com/user-attachments/assets/b55b4344-ecd4-47dc-ba50-fc8a711efe3e" />
 
 ---
 
@@ -41,8 +41,7 @@ Le fichier `parcoeur.c` gère la phase de placement et le premier déplacement/r
 
 ---
 
-## ![Uploading Capture d’écran du 2026-03-19 09-57-58.png…]()
-Structure des Fichiers
+## Structure des Fichiers
 
 * `joueurs/parcoeur.c` : Moteur de recherche et de réduction par symétrie/rotation.
 * `joueurs/ouvertures.txt` : Base de données contenant les positions théoriques et leurs réponses associées.
