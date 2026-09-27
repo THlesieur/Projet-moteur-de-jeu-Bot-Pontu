@@ -1,2 +1,13 @@
 # Projet-moteur-de-jeu-Bot-Pontu
 La partie du projet qui concerne ce que j'ai développé pour le bot. C'est donc toute la partie théorique du jeu pontu, que nous avons nous-même élaboré, où au début du jeu on peut directement donner un coup à jouer en fonction de la position.
+
+
+Pour bien comprendre mon code il faut savoir comment fonctionne le jeu. Il est composé d'un plateau comprenant 25 îles, formant un carré de 5 sur 5, numérotées de 0 à 24 (le 0 étant le coin supérieur gauche puis on compte vers la droite), et 40 ponts qui relient chaque île avec les îles voisines, eux aussi num<img width="903" height="784" alt="Capture d’écran du 2026-03-18 08-21-01" src="https://github.com/user-attachments/assets/752aa953-4721-4c06-bdee-de7700e122f0" />
+érotés de 0 à 40.
+
+![Uploading Capture d’écran du 2026-03-18 08-21-01.png…]()
+
+Une partie se déroule entre deux équipes : les rouges et les bleus, chacun possédant deux pions et un roi (alternative au pontu où le roi a plus de valeur qu'un pion). Les rouges sont toujours ceux qui commencent. Les trois premiers coups des deux equipes consistent à placer chacun leur tour un de leurs pions sur une des îles non occupées du plateau en terminant par le roi. C'est une étape cruciale pour directement prendre de l'espace et gêner l'adversaire pour le reste de la partie. Ensuite les coups se résument à déplacer un de ses pions sur une île voisine si et seulement si celle-ci est inoccupée et reliée par un pont à l'île du pion à déplacer, puis à retirer un des ponts du plateau. Le but du jeu sera donc d'isoler les pions de l'adversaire, c'est à dire faire en sorte que chacun de ses pions se retrouve sur une île qui n'est plus reliée à aucune autre. Pour réduire la fréquence de match nuls, l'alternative royale permet de construire un système de points où le premier qui isole le roi advese gagne un point. en cas d'égalité ce sera donc celui qui a ce point bonus qui gagnera. 
+
+Mon code (joueurs/parcoeur.c) joue donc ici sur le placement des pions et le premier coup de déplacement d'un pion et de suppression d'un pont en se basant sur des positions étudiées et stockées dans le fichier "joueurs/ouvertures.txt".
+Il consiste à évaluer le numéro du coup qu'on doit jouer, ce qui permer de déterminer la couleur de notre équipe et le nombre de pions déjà placés. En sachant ceci, sauf pour les tous premiers coups qui offrent beaucoup moins de possibilités, mon proramme stocke en mémoire les différentes positions à analyser pour ce coup précis. Pour chaque position il analyse ses différentes transformations qui sont les rotations et les symétries, étant donné qu'on se trouve sur un carré. Ensuite il renvoie donc le coup à jouer en lui faisant subir les rotations et symétries nécessaires si besoin.
