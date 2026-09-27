@@ -3,11 +3,11 @@ La partie du projet qui concerne ce que j'ai développé pour le bot. C'est donc
 
 ---
 
-## 🎲 Le Jeu Pontu (Règles & Plateau)
+## Le Jeu Pontu (Règles & Plateau)
 
-Le **Pontu** est un jeu de plateau abstrait d'affrontement opposant deux équipes : **Les Rouges** (qui commencent) et **Les Bleus**.
+Le Pontu est un jeu de plateau abstrait d'affrontement opposant deux équipes : Les Rouges (qui commencent) et **Les Bleus**.
 
-### 📌 Composition du plateau
+### Composition du plateau
 * **25 îles** disposées en un carré de 5x5, numérotées de `0` à `24` (en partant du coin supérieur gauche, de gauche à droite et de haut en bas).
 * **40 ponts** reliant les îles adjacentes, numérotés de `0` à `39`.
 
