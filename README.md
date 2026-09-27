@@ -22,7 +22,7 @@ Chaque joueur possède **2 pions** et **1 Roi** (le Roi apporte une valeur supé
 2. **Phase de jeu (À partir du coup 6) :** Chaque coup se déroule en deux temps :
    * Déplacer un de ses pions/roi vers une île voisine libre (reliée par un pont).
    * Retirer définitivement un pont du plateau.
-3. **Condition de victoire :** Le but est d'isoler les pièces adverses. Dans la variante royale, isoler le Roi adverse rapporte un point bonus décisif pour éviter les matchs nuls.
+3. **Condition de victoire :** Le but est d'isoler les pièces adverses. Dans la variante royale, isoler le Roi adverse en premier rapporte un point bonus décisif pour éviter les matchs nuls.
 
 ---
 
